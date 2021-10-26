@@ -1,6 +1,8 @@
 # weathermenu
 A script to retrieve data from a Netatmo weather station and display it in a Mac menu bar.
 
+Intended for use with [SwiftBar](https://swiftbar.app).
+
 # Configuration
 
 Note that this script is written in PHP, which I believe is no longer included in the operating system as of macOS Monterey, so you'll need to install it via [Homebrew](https://brew.sh). Also note that Homebrew installs on different locations whether you're using an Apple or Intel processor; this version of the script expects PHP in `/opt/homebrew/bin/php`, which is the default installation location on Apple silicon.
