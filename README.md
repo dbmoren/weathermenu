@@ -9,7 +9,7 @@ Note that this script is written in PHP, which I believe is no longer included i
 
 (If you're running on Intel, this should probably be `/usr/local/bin/php` instead, but you can clarify by running the command `which php` in Terminal and using the resulting path.
 
-You'll need a handful of details to configure the script, including the username and password for your Netatmo account, and your module's MAC address (probably easiest to obtain via your Wi-Fi router). 
+You'll need a handful of details to configure the script, including the username and password for your Netatmo account, your current timezone, and your module's MAC address (probably easiest to obtain via your Wi-Fi router). 
 
 In addition, you'll also need to create an application via [Netatmo's developer page](https://dev.netatmo.com/apps/). Once you do, it will provide you with two key pieces of information: a client ID (a string of static characters identifying your app), and a client secret (essentially a password). These two pieces of information are used to retrieve the authorization token, as described above. 
 
