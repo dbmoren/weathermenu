@@ -7,7 +7,10 @@
 # <bitbar.desc>Gets weather from local Netatmo station. Requires configuration for device ID, Netatmo account information, and developer access.</bitbar.desc>
 # <bitbar.dependencies>php</bitbar.dependencies>
 
-// Your Neatmo module's MAC address.
+// Your current timezone, as per this list: https://www.php.net/manual/en/timezones.php
+$default_timezone = "America/New_York";
+
+// Your Netatmo module's MAC address.
 $device_id = "[MAC ADDRESS]";
 
 // Client ID and Client Secret obtained from Netatmo Developer setup. (https://dev.netatmo.com/apps/)
@@ -69,7 +72,7 @@ if(is_array($json)) {
 	$temp_fahrenheit = round(($temp_celsius * 1.8) + 32);
 	$date = new DateTime();
 	$date->setTimestamp($last_update);
-	$date->setTimezone(new DateTimeZone('America/New_York'));
+	$date->setTimezone(new DateTimeZone($default_timezone));
 	$output_date = $date->format('Y-m-d H:i:s');
 
 	switch(true) {
