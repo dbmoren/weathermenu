@@ -79,7 +79,7 @@ if(is_array($json)) {
 		case ($battery_percent >= 50):
 			$battery_status_icon = "\u{1F7E2}";
 			break;
-		case ($battery_percent < 50 && $battery > 10):
+		case ($battery_percent < 50 && $battery_percent > 10):
 			$battery_status_icon = "\u{1F7E0}";
 			break;
 		case ($battery_percent <= 10):
